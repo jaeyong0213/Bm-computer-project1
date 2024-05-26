@@ -6,24 +6,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>하루독서</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <header>
-    <h1><a href="index.html">하루독서</a></h1>
-    <!-- 하루 독서 누르면 홈으로 !-->
 
-    <nav>
-      <ul id="ul1">
-        <li><a href="index.html">도서관 이용 안내</a></li>
-        <li><a href="book.html">공지사항</a></li>
-        <li><a href="login.html">대출현황</a></li>
-        <li><a href="join.html">상호대차</a></li>
-        <li><a href="join.html">로그인</a></li>
-      </ul>
-    </nav>
+  <header>
+    <div class="container">
+      <div class="site-name">
+        <h1><a href="index.html">하루독서</a></h1>
+      </div>
+      <!-- 하루 독서 누르면 홈으로 !-->
+
+      <nav>
+        <ul>
+          <li><a href="index.html">도서관 이용 안내</a></li>
+          <li><a href="book.html">공지사항</a></li>
+          <li><a href="login.html">대출현황</a></li>
+          <li><a href="join.html">상호대차</a></li>
+          <li><a href="join.html">로그인</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
 
@@ -35,10 +40,53 @@
 
 
   <style>
-    h1 {
-      margin-left: 250px;
-      margin-top: 50px;
-      font-size: 50px
+    header {
+      background-color: #fff;
+      padding: 10px 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .site-name {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    h1 a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    nav ul li:first-child {
+      margin-left: 0;
+    }
+
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
     }
 
     #search_bar {
@@ -47,15 +95,6 @@
       width: 500px;
       height: 25px;
       font-size: 12px;
-    }
-
-    #ul1 {
-      list-style: none;
-      margin-left: 1000px;
-    }
-
-    li {
-      display: inline;
     }
   </style>
 
