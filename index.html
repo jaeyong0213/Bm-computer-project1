@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 아람누리 도서관 홈페이지 참고 !-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">하루독서</a></h1>
+    <!-- 하루 독서 누르면 홈으로 !-->
+
+    <nav>
+      <ul id="ul1">
+        <li><a href="index.html">도서관 이용 안내</a></li>
+        <li><a href="book.html">공지사항</a></li>
+        <li><a href="login.html">대출현황</a></li>
+        <li><a href="join.html">상호대차</a></li>
+        <li><a href="join.html">로그인</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="search">
+    <input id="search_bar" type="text" placeholder="검색어를 입력하세요">
+    <!-- 검색창 만들기:
+    input id = "" size = style="width:300px;height:200px;font-size:30px;" !-->
+  </div>
+
+
+  <style>
+    h1 {
+      margin-left: 250px;
+      margin-top: 50px;
+      font-size: 50px
+    }
+
+    #search_bar {
+      margin-left: 250px;
+      margin-top: 50px;
+      width: 500px;
+      height: 25px;
+      font-size: 12px;
+    }
+
+    #ul1 {
+      list-style: none;
+      margin-left: 1000px;
+    }
+
+    li {
+      display: inline;
+    }
+  </style>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
