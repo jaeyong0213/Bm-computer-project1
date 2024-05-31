@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-<!-- 아람누리 도서관 홈페이지 참고 !-->
+<html lang="ko">
 
 <head>
   <meta charset="utf-8">
@@ -13,11 +11,14 @@
 <body>
 
   <header>
+    <div class="보노보노">
+      <img src="main.png" width="100px" height="100px" alt="Main Logo">
+    </div>
+
     <div class="container">
       <div class="site-name">
         <h1><a href="index.html">하루독서</a></h1>
       </div>
-      <!-- 하루 독서 누르면 홈으로 !-->
 
       <nav>
         <ul>
@@ -31,26 +32,40 @@
     </div>
   </header>
 
-
-
-
   <div class="search">
     <input id="search_bar" type="text" placeholder="검색어를 입력하세요">
-    <!-- 검색창 만들기:
-    input id = "" size = style="width:300px;height:200px;font-size:30px;" !-->
   </div>
 
-
-
   <main>
+    <div class="book">
+      <img src="아인슈타인.jpg" width="300px" height="350px" alt="book1">
+      <div class="book_info">
+        <h2>도서명</h2>
+        <p class="작가">박성관</p>
+        <p class="출판사">창비</p>
+        <p class="정보">아인슈타인 광속 미스테리</p>
+      </div>
+    </div>
 
-
-    
+    <div class="book">
+      <img src="국일만_독서.jpg" width="300px" height="350px" alt="book2">
+      <div class="book_info">
+        <h2>도서명</h2>
+        <p class="작가">김미경</p>
+        <p class="출판사">북하우스</p>
+        <p class="정보">국일만 독서법</p>
+      </div>
+    </div>
   </main>
 
-
-
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
     header {
       background-color: #fff;
       padding: 10px 0;
@@ -108,11 +123,39 @@
       font-size: 20px;
     }
 
+    .book {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      padding: 20px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
+    .book img {
+      margin-right: 20px;
+      border-radius: 5px;
+    }
 
+    .book_info {
+      display: flex;
+      flex-direction: column;
+    }
 
+    .book_info h2 {
+      margin: 0 0 10px;
+      font-size: 1.5em;
+    }
+
+    .book_info p {
+      margin: 5px 0;
+      color: #555;
+    }
   </style>
-
 
   <script src="script.js"></script>
 </body>
