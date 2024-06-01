@@ -11,25 +11,27 @@
 <body>
 
   <header>
-    <div class="보노보노">
-      <img src="main.png" width="100px" height="100px" alt="Main Logo">
-    </div>
+
+    <!--<img class="보노보노" src="main.png" width="100px" height="100px" alt="Bono_Logo">!-->
+
 
     <div class="container">
-      <div class="site-name">
-        <h1><a href="index.html">하루독서</a></h1>
-      </div>
+      <div class="logo-and-site-name">
+        <img class="보노보노" src="main.png" width="100px" height="100px" alt="Bono_Logo">
+        <div class="site-name">
+          <h1><a href="index.html">하루독서</a></h1>
+        </div>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">도서관 이용 안내</a></li>
-          <li><a href="book.html">공지사항</a></li>
-          <li><a href="login.html">대출현황</a></li>
-          <li><a href="join.html">상호대차</a></li>
-          <li><a href="join.html">로그인</a></li>
-        </ul>
-      </nav>
-    </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">도서관 이용 안내</a></li>
+            <li><a href="book.html">공지사항</a></li>
+            <li><a href="login.html">대출현황</a></li>
+            <li><a href="join.html">상호대차</a></li>
+            <li><a href="join.html">로그인</a></li>
+          </ul>
+        </nav>
+      </div>
   </header>
 
   <div class="search">
@@ -56,7 +58,25 @@
         <p class="정보">국일만 독서법</p>
       </div>
     </div>
+
+    <div class="book">
+      <img src="국일만_문학.jpg" width="300px" height="350px" alt="book1">
+      <div class="book_info">
+        <h2>도서명</h2>
+        <p class="작가">김미경</p>
+        <p class="출판사">창비</p>
+        <p class="정보">정보</p>
+      </div>
+    </div>
+
   </main>
+
+  <footer>
+    <center>
+      <p class="footer_text">이재용</p>
+    </center>
+  </footer>
+
 
   <style>
     body {
@@ -64,6 +84,15 @@
       background-color: #f0f0f0;
       margin: 0;
       padding: 20px;
+    }
+
+    .logo-and-site-name {
+      display: flex;
+      align-items: center;
+    }
+
+    .보노보노 {
+      margin-right: 20px;
     }
 
     header {
@@ -84,6 +113,7 @@
       color: #fff;
       font-size: 24px;
       text-decoration: none;
+      margin-right: 70px;
     }
 
     h1 a {
@@ -99,7 +129,7 @@
 
     nav ul li {
       display: inline;
-      margin-left: 20px;
+      margin-left: 40px;
     }
 
     nav ul li:first-child {
