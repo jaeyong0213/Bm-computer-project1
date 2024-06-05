@@ -45,9 +45,9 @@
       <div class="login-container">
         <h2>로그인</h2>
         <form>
-          <input type="text" placeholder="아이디" required>
-          <input type="password" placeholder="비밀번호" required>
-          <button type="submit">로그인</button>
+          <input type="text" placeholder="아이디" required><br><br>
+          <input type="password" placeholder="비밀번호" required><br><br>
+          <button class="submit"><a href="index.html" class="login">로그인</a></button>
         </form>
       </div>
     </div>
@@ -130,6 +130,43 @@
       width: 750px;
       height: 50px;
       font-size: 20px;
+    }
+
+    .login-section {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 200px 0;
+      padding: 20px;
+      max-width: 400px;
+      max-height: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .submit {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-left: auto;
+      text-decoration: none;
+    }
+
+
+    .submit:hover {
+      background-color: #0056b3;
+    }
+
+    .login {
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
 

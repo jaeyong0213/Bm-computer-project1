@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>하루독서</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<style>
+  /* 기본 스타일 */
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .book-list {
+    margin: 20px;
+  }
+
+  .book-item {
+    margin-bottom: 10px;
+  }
+
+  .book-details {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+  }
+</style>
+
+<body>
+
+  <header>
+
+    <!--<img class="보노보노" src="main.png" width="100px" height="100px" alt="Bono_Logo">!-->
+
+
+    <div class="container">
+      <div class="logo-and-site-name">
+        <img class="보노보노" src="/picture/main.png" width="100px" height="100px" alt="Bono_Logo">
+        <div class="site-name">
+          <h1><a href="../index.html">하루독서</a></h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="../index.html">도서관 이용 안내</a></li>
+            <li><a href="../book.html">공지사항</a></li>
+            <li><a href="../login.html">대출현황</a></li>
+            <li><a href="../join.html">상호대차</a></li>
+            <li><a href="../login.html">로그인</a></li>
+            <li><a href="../reservation.html">예약하기</a></li>
+          </ul>
+        </nav>
+      </div>
+  </header>
+
+  <p class="recommand">추천 도서</p>
+
+  <div class="search">
+    <input id="search_bar" type="text" placeholder="검색어를 입력하세요">
+  </div>
+
+
+  <main>
+
+    <body>
+      <div class="book-list">
+        <div class="book-item">
+          <span>아인슈타인과 광속 미스터리</span>
+          <button onclick="showBookDetails('book1')">정보보기</button>
+          <div id="book1" class="book-details">
+            <!-- 책 정보가 여기에 동적으로 추가됩니다 -->
+          </div>
+        </div>
+        <div class="book-item">
+          <span>너를 국어 1등급으로 만들어주마:비문학</span>
+          <button onclick="showBookDetails('book2')">정보보기</button>
+          <div id="book2" class="book-details">
+            <!-- 책 정보가 여기에 동적으로 추가됩니다 -->
+          </div>
+        </div>
+        <!-- 추가 책 항목도 동일한 구조로 추가 -->
+      </div>
+
+      <script>
+        // 책 정보 객체
+        const bookInfo = {
+          book1: {
+            title: "아인슈타인과 광속 미스터리",
+            author: "박성관",
+            description: "아인슈타인의 광속 미스터리: 232쪽 아인슈타인의 상대성 이론은 양자역학과 함께 20세기 최대의 과학 이론으로 손꼽힌다. 그러나 상대성 이론의 세계에서 시간과 공간은 기묘하게 변화하며,  태어나서 중력의 지배를 한 번도 벗어난 적이 없는 지구인이 직관적으로 이해하기 어려운 것도 사실이다. 그럼에도 상대성 이론은  확고한 물리 법칙으로 자리 잡았다. 『아인슈타인과 광속 미스터리』는 그 여정을 따라가는 안내서이자, 청소년들에게 특수 상대성 이론을 쉽고 친절하게 설명하는 해설서이다.",
+                 
+            publisher: "창비",
+            year: "2017"
+          },
+          book2: {
+            title: "너를 국어 1등급으로 만들어주마:비문학",
+            author: "김범준",
+            description: "이 책은 ...",
+            publisher: "메리포핀스",
+            year: "2024"
+          }
+          // 다른 책 정보도 동일한 형식으로 추가
+        };
+
+        // 정보보기 버튼 클릭 시 호출되는 함수
+        function showBookDetails(bookId) {
+          const book = bookInfo[bookId];
+          const detailsDiv = document.getElementById(bookId);
+
+          if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
+            // 책 정보를 동적으로 추가
+            detailsDiv.innerHTML = `
+                      <h3>${book.title}</h3>
+                      <p><strong>저자:</strong> ${book.author}</p>
+                      <p><strong>설명:</strong> ${book.description}</p>
+                      <p><strong>출판사:</strong> ${book.publisher}</p>
+                      <p><strong>출판 연도:</strong> ${book.year}</p>
+                  `;
+            detailsDiv.style.display = "block";
+          } else {
+            detailsDiv.style.display = "none";
+          }
+        }
+      </script>
+
+
+
+
+
+
+
+
+
+      <body>
+        <div class="book-list">
+          <div class="book-item">
+            <span>너를 국어 1등급으로 만들어주마:문학</span>
+            <button onclick="showBookDetails('book1')">정보보기</button>
+            <div id="book1" class="book-details">
+              <!-- 책 정보가 여기에 동적으로 추가됩니다 -->
+            </div>
+          </div>
+          <div class="book-item">
+            <span>책 제목 2</span>
+            <button onclick="showBookDetails('book2')">정보보기</button>
+            <div id="book2" class="book-details">
+              <!-- 책 정보가 여기에 동적으로 추가됩니다 -->
+            </div>
+          </div>
+          <!-- 추가 책 항목도 동일한 구조로 추가 -->
+        </div>
+
+        <script>
+          // 책 정보 객체
+          const bookInfo = {
+            book1: {
+              title: "너를 국어 1등급으로 만들어주마:문학",
+              author: "김범준",
+              description: "이 책은 ...",
+              publisher: "메리포핀스",
+              year: "2023"
+            },
+            book2: {
+              title: "책 제목 2",
+              author: "저자 2",
+              description: "이 책은 ...",
+              publisher: "출판사 2",
+              year: "2022"
+            }
+            // 다른 책 정보도 동일한 형식으로 추가
+          };
+
+          // 정보보기 버튼 클릭 시 호출되는 함수
+          function showBookDetails(bookId) {
+            const book = bookInfo[bookId];
+            const detailsDiv = document.getElementById(bookId);
+
+            if (detailsDiv.style.display === "none" || detailsDiv.style.display === "") {
+              // 책 정보를 동적으로 추가
+              detailsDiv.innerHTML = `
+                      <h3>${book.title}</h3>
+                      <p><strong>저자:</strong> ${book.author}</p>
+                      <p><strong>설명:</strong> ${book.description}</p>
+                      <p><strong>출판사:</strong> ${book.publisher}</p>
+                      <p><strong>출판 연도:</strong> ${book.year}</p>
+                  `;
+              detailsDiv.style.display = "block";
+            } else {
+              detailsDiv.style.display = "none";
+            }
+          }
+        </script>
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .logo-and-site-name {
+      display: flex;
+      align-items: center;
+    }
+
+    .보노보노 {
+      margin-right: 20px;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 10px 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .site-name {
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      margin-right: 70px;
+    }
+
+    h1 a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-left: 30px;
+    }
+
+    nav ul li:first-child {
+      margin-left: 0;
+    }
+
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #search_bar {
+      margin-left: 600px;
+      margin-top: 10px;
+      width: 750px;
+      height: 50px;
+      font-size: 20px;
+    }
+  </style>
