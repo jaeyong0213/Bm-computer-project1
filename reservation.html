@@ -28,59 +28,68 @@
             <li><a href="book.html">공지사항</a></li>
             <li><a href="login.html">대출현황</a></li>
             <li><a href="join.html">상호대차</a></li>
-            <li><a href="login.html">로그인</a></li>
+            <li><a href="join.html">로그인</a></li>
           </ul>
         </nav>
       </div>
   </header>
 
-  <p class="popular">인기 독서</p>
-
   <div class="search">
     <input id="search_bar" type="text" placeholder="검색어를 입력하세요">
   </div>
 
+
   <main>
-    <div class="book">
-      <img src="아인슈타인.jpg" width="300px" height="350px" alt="book1">
-      <div class="book_info">
-        <h2>아인슈타인과 광속 미스터리</h2>
-        <p class="작가">박성관</p>
-        <p class="출판사">창비</p>
-        <p class="정보">아인슈타인 광속 미스테리</p>
-      </div>
-      <a href="reservation.html" class="reservation">예약하기</a>
-    </div>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <div class="book">
-      <img src="국일만_독서.jpg" width="300px" height="350px" alt="book2">
-      <div class="book_info">
-        <h2>너를 국어 1등급으로 만들어주마-비문학편</h2>
-        <p class="작가">김미경</p>
-        <p class="출판사">북하우스</p>
-        <p class="정보">국일만 독서법</p>
-      </div>
-      <button class="reservation">예약하기</button>
-    </div>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>예약 창</title>
+      <style>
+        /* 스타일링을 위한 CSS */
+        /* 여기에 필요한 스타일을 추가하세요 */
+      </style>
+    </head>
 
-    <div class="book">
-      <img src="국일만_문학.jpg" width="300px" height="350px" alt="book1">
-      <div class="book_info">
-        <h2>너를 국어 1등급으로 만들어주마-문학편</h2>
-        <p class="작가">김미경</p>
-        <p class="출판사">창비</p>
-        <p class="정보">정보</p>
+    <body>
+      <div class="reservation">
+        <div class="title">
+          <h1>예약 창</h1>
+          <form id="reservationForm">
+            <label for="name">도서명:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">학번/이름:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="date">대출 시작일:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="date">반납일:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="comments">유의 사항:</label><br>
+            <p><b><span style=color:red;>*반납 기한이 지나면 연체일수 만큼 대출이 불가합니다.*</span></b></p><br>
+
+
+
+            <input type="submit" value="예약">
+          </form>
+        </div>
       </div>
-      <button class="reservation">예약하기</button>
-    </div>
+
+      <script>
+            // JavaScript 코드를 여기에 추가하여 폼 유효성 검사 및 제출을 처리할 수 있습니다.
+      </script>
+    </body>
+
+    </html>
+
 
   </main>
 
-  <footer>
-    <center>
-      <p class="footer_text">백마고등학교</p>
-    </center>
-  </footer>
 
 
   <style>
@@ -158,7 +167,7 @@
       font-size: 20px;
     }
 
-    .book {
+    .reservation {
       display: flex;
       align-items: center;
       background-color: white;
@@ -170,50 +179,4 @@
       margin-left: auto;
       margin-right: auto;
     }
-
-    .book img {
-      margin-right: 20px;
-      border-radius: 5px;
-    }
-
-    .book_info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .book_info h2 {
-      margin: 0 0 10px;
-      font-size: 1.5em;
-    }
-
-    .book_info p {
-      margin: 5px 0;
-      color: #555;
-    }
-
-
-    .reservation {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      margin-left: auto;
-    }
-
-
-    .reservation:hover {
-      background-color: #0056b3;
-    }
-
-    .popular {
-      margin-left: 500px;
-      margin-top: ;
-    }
   </style>
-
-  <script src="script.js"></script>
-</body>
-
-</html>
